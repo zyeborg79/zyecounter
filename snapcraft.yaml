@@ -1,0 +1,36 @@
+name: zye-counter
+version: "1.0.1"
+summary: Counter App
+description: A demo of Counter App for linux using flutter
+
+confinement: strict
+base: core18
+# grade: stable
+
+apps:
+  zye-counter:
+    command: zye-counter
+    extensions: [flutter-master]
+
+# icon: snap/gui/icon.png
+
+parts:
+  zye-counter:
+    source: .
+    plugin: flutter
+    flutter-target: lib/main.dart
+#   assets:
+#     plugin: nil
+#     stage-packages:
+#       - dmz-cursor-theme
+#       - fonts-dejavu
+#       - fonts-freefont-ttf
+#       - fonts-ubuntu
+
+# layout:
+#   /usr/share/fonts:
+#     bind: $SNAP/usr/share/fonts
+#   /etc/fonts:
+#     bind: $SNAP/etc/fonts
+#   /usr/share/icons:
+#     bind: $SNAP/usr/share/icons
